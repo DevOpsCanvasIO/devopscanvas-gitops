@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devopscanvas-control-plane
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ORG/devopscanvas-control-plane
+    targetRevision: main
+    path: infra/helm/devopscanvas-control-plane
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: devopscanvas
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
