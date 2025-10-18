@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: devopscanvas-observability
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/DevOpsCanvasIO/devopscanvas-gitops
+    repoURL: https://github.com/DevOpsCanvasIO/devopscanvas-observability
     targetRevision: main
-    path: applications
+    path: infra/helm/observability
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: observability
   syncPolicy:
     automated:
       prune: true

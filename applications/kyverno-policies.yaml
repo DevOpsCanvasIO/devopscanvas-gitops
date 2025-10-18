@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ORG/devopscanvas-policies
+    repoURL: https://github.com/DevOpsCanvasIO/devopscanvas-policies
     targetRevision: main
     path: baseline
   destination:

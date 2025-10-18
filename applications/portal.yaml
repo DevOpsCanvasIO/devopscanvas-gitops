@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ORG/devopscanvas-portal
+    repoURL: https://github.com/DevOpsCanvasIO/devopscanvas-portal
     targetRevision: main
     path: infra/helm/devopscanvas-portal
   destination:

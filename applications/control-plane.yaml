@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ORG/devopscanvas-control-plane
+    repoURL: https://github.com/DevOpsCanvasIO/devopscanvas-control-plane
     targetRevision: main
     path: infra/helm/devopscanvas-control-plane
   destination:
