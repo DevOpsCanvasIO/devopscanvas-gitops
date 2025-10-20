@@ -1,0 +1,25 @@
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: default
+spec:
+  requirements:
+    - key: "node.kubernetes.io/instance-type"
+      operator: In
+      values: ["m5.large","m5.xlarge","c6i.large","c6i.xlarge"]
+    - key: "topology.kubernetes.io/zone"
+      operator: In
+      values: ["us-east-1a","us-east-1b"]
+    - key: "kubernetes.io/arch"
+      operator: In
+      values: ["amd64"]
+  limits:
+    resources:
+      cpu: "1000"
+  consolidation:
+    enabled: true
+  weight: 10
+  ttlSecondsAfterEmpty: 120
+  providerRef:
+    name: default
+    kind: AWSNodeTemplate

@@ -1,0 +1,12 @@
+apiVersion: karpenter.k8s.aws/v1beta1
+kind: AWSNodeTemplate
+metadata:
+  name: default
+spec:
+  amiFamily: AL2
+  subnetSelector:
+    karpenter.sh/discovery: devopscanvas-eks
+  securityGroupSelector:
+    karpenter.sh/discovery: devopscanvas-eks
+  tags:
+    devopscanvas: "true"

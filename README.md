@@ -1,2 +1,3 @@
-# GitOps v2.1
-No major changes; ensure verify-keyless policy repo is referenced elsewhere if needed.
+# GitOps v2.2
+Adds control-plane Argo Application and Karpenter Provisioner/AWSNodeTemplate manifests.
+Generated: 2025-10-17T17:18:01.603677
